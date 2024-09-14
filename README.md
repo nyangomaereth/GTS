@@ -1,150 +1,99 @@
-# Garbage Trucking System
+# Garbage Tracking System
 
-## Project Overview
+## Overview
 
-The Garbage Trucking System is a web-based application designed to optimize waste collection routes, manage truck fleets, and improve overall efficiency in garbage collection operations. This project is built using HTML, CSS, and JavaScript, implementing a single-page application (SPA) architecture.
-
-## Table of Contents
-
-1. [File Structure](#file-structure)
-2. [Setup and Installation](#setup-and-installation)
-3. [Code Explanation](#code-explanation)
-   - [HTML (index.html)](#html-indexhtml)
-   - [CSS (styles.css)](#css-stylescss)
-   - [JavaScript (app.js)](#javascript-appjs)
-4. [Features](#features)
-5. [Future Enhancements](#future-enhancements)
-
-## File Structure
-
-```
-garbage-trucking-system/
-│
-├── index.html
-├── styles.css
-├── app.js
-└── README.md
-```
-
-## Setup and Installation
-
-1. Clone the repository or download the files.
-2. Open the `index.html` file in a web browser.
-
-Note: This is a front-end only implementation. For full functionality, you would need to integrate with a back-end server and database.
-
-## Code Explanation
-
-### HTML (index.html)
-
-The `index.html` file serves as the main structure of the application.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Meta tags, title, and links to CSS and Font Awesome -->
-</head>
-<body>
-    <header>
-        <!-- Navigation menu -->
-    </header>
-
-    <main id="app">
-        <!-- Dynamic content will be loaded here -->
-    </main>
-
-    <footer>
-        <!-- Footer content -->
-    </footer>
-
-    <script src="app.js"></script>
-</body>
-</html>
-```
-
-Key points:
-- The `<main id="app">` element is where the dynamic content will be rendered.
-- The navigation menu in the `<header>` allows users to switch between different views.
-- The `app.js` script is linked at the end of the body to ensure DOM content is loaded before the script runs.
-
-### CSS (styles.css)
-
-The `styles.css` file contains all the styles for the application.
-
-Key sections:
-1. Basic Reset and General Styles
-2. Header and Footer Styles
-3. Dashboard Styles
-4. Banner Styles
-5. Form Styles
-6. Table Styles
-
-Notable features:
-- Responsive grid layout for the dashboard using CSS Grid.
-- A banner section with a background image and overlaid text.
-- Consistent color scheme and typography throughout the application.
-
-### JavaScript (app.js)
-
-The `app.js` file contains the main application logic, implementing a simple routing system and rendering functions for different views.
-
-Key components:
-
-1. `app` object: The main application object that encapsulates all functionality.
-
-2. Initialization:
-   ```javascript
-   init() {
-       this.cacheDom();
-       this.bindEvents();
-       this.render('dashboard');
-   }
-   ```
-   - Caches DOM elements
-   - Binds event listeners
-   - Renders the initial dashboard view
-
-3. Event Handling:
-   ```javascript
-   handleNavClick(e) {
-       // ... handles navigation clicks and triggers appropriate render
-   }
-   ```
-
-4. Rendering:
-   ```javascript
-   render(page) {
-       // ... switches between different page renders based on navigation
-   }
-   ```
-
-5. Page-specific render functions:
-   - `renderDashboard()`
-   - `renderRoutes()`
-   - `renderTrucks()`
-   - `renderSchedule()`
-   - `renderReports()`
-
-Each render function returns an HTML string that is inserted into the main `<div id="app">` element.
+The Garbage Tracking System is a responsive web application designed to manage and monitor waste collection services. Built using HTML and CSS, this project demonstrates modern web design principles and responsive layouts without relying on JavaScript.
 
 ## Features
 
-1. Dashboard with key metrics
-2. Route management view
-3. Truck fleet management view
-4. Schedule management view
-5. Reporting view
-6. Responsive design for various screen sizes
+- Responsive design that works on desktop and mobile devices
+- Multiple pages: Home, Services, About Us, and Contact
+- Dashboard-style summary on the home page
+- Service showcase with hover effects
+- About Us page with team member profiles
+- Contact form for user inquiries
 
-## Future Enhancements
+## Project Structure
 
-1. User authentication and authorization
-2. Integration with a back-end server for data persistence
-3. Real-time tracking of trucks using mapping services
-4. Advanced analytics and reporting features
-5. Mobile app for drivers
+```
+garbage-tracking-system/
+│
+├── index.html
+├── services.html
+├── about.html
+├── contact.html
+├── styles.css
+├── images/
+│   ├── truck.jpg
+│   └── [other images]
+├── videos/
+│   ├── garbage_truck_video.mp4
+│   └── services_video.mp4
+└── README.md
+```
 
----
+## Setup
 
-This project serves as a foundation for a Garbage Trucking System and can be extended with more features and back-end integration as needed.
+1. Clone the repository or download the project files.
+2. Ensure all HTML files (index.html, services.html, about.html, contact.html) are in the root directory.
+3. Make sure the styles.css file is in the root directory.
+4. Create an `images` folder and add your image files, including `truck.jpg` for the hero image.
+5. Create a `videos` folder and add your video files: `garbage_truck_video.mp4` and `services_video.mp4`.
+
+## Customization
+
+### Colors
+
+The color scheme can be easily modified by changing the CSS variables in the `:root` selector in `styles.css`:
+
+```css
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+}
+```
+
+### Images
+
+Replace the placeholder images with your own:
+
+1. In the `images` folder, add your own images.
+2. Update the `src` attributes in the HTML files to point to your new images.
+
+### Content
+
+Modify the content in each HTML file to match your specific garbage tracking system:
+
+- Update text in headings, paragraphs, and list items.
+- Adjust the dashboard summary numbers on the home page.
+- Modify service descriptions on the services page.
+- Update team member information on the about page.
+- Change contact information on the contact page.
+
+## Responsive Design
+
+The layout is responsive and adapts to different screen sizes:
+
+- Desktop: Full layout with grid-based designs
+- Tablet: Adjusted grids and font sizes
+- Mobile: Single column layout with stacked elements
+
+## Browser Compatibility
+
+This project is designed to work on modern browsers that support HTML5 and CSS3, including:
+
+- Google Chrome (latest)
+- Mozilla Firefox (latest)
+- Safari (latest)
+- Microsoft Edge (latest)
+
+## Contributing
+
+Contributions to improve the design or extend the functionality of this project are welcome. Please fork the repository and submit a pull request with your changes.
+
+## License
+
+This project is open-source and available under the MIT License.
